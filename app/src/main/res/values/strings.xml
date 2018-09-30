@@ -1,0 +1,7 @@
+<resources>
+    <!--Application-->
+    <string name="app_name">CSLinker</string>
+
+    <!--Splash Activity-->
+    <string name="welcome_message">Welcome to CSLinker App</string>
+</resources>
