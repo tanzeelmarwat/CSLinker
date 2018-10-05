@@ -1,6 +1,7 @@
 package com.tanzeelmarwat.cslinker.views;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -11,16 +12,18 @@ import com.tanzeelmarwat.cslinker.utils.Constants;
 
 public class SplashActivity extends AppCompatActivity {
 
+    Context mContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        mContext = this;
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                // This task will excute after a delay
+                Intent intent = new Intent(mContext, LandingActivity.class);
+                startActivity(intent);
                 finish();
 
             }
