@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/alumni"
+            android:title="Alumni"
+            android:icon="@drawable/selector_alumni"/>
+        <item
+            android:id="@+id/students"
+            android:title="Students"
+            android:icon="@drawable/selector_students"/>
+        <item
+            android:id="@+id/campus"
+            android:title="Campus"
+            android:icon="@drawable/selector_campus"/>
+        <item
+            android:id="@+id/faculty"
+            android:title="Faculty"
+            android:icon="@drawable/selector_staff"/>
+        <item
+            android:id="@+id/staff"
+            android:title="Staff"
+            android:icon="@drawable/selector_staff"/>
+        <item
+            android:id="@+id/profile"
+            android:title="My Profile"
+            android:icon="@drawable/selector_profile"/>
+    </group>
+
+</menu>

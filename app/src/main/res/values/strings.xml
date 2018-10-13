@@ -20,4 +20,14 @@
     <string name="empty_email">Email cannot be empty</string>
     <string name="empty_password">Password cannot be empty</string>
     <string name="empty_confirm_password">Confirm Password cannot be empty</string>
+    <string name="password_miss_match">Password and Confirm Password donot match</string>
+
+    <string name="students_fragment">Students Fragment</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.tanzeelmarwat.cslinker.views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tanzeelmarwat.cslinker.R;
+import com.tanzeelmarwat.cslinker.utils.Constants;
 
 public class SignupActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -30,6 +32,14 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         etPassword = findViewById(R.id.et_password);
         etConfirmPassword = findViewById(R.id.et_confirm_password);
         tvTitle.setText(getResources().getString(R.string.signup));
+
+        if(Constants.IS_DEBUG_MODE) {
+            spUserType.setSelection(1);
+            etName.setText(Constants.TEST_NAME);
+            etEmail.setText(Constants.TEST_EMAIL);
+            etPassword.setText(Constants.TEST_PASSWORD);
+            etConfirmPassword.setText(Constants.TEST_CONFIRM_PASSWORD);
+        }
     }
 
     @Override
@@ -44,7 +54,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 String password = etPassword.getText().toString();
                 String confirmPassword = etConfirmPassword.getText().toString();
                 if(validateFields(name, email, password, confirmPassword)) {
-                    // Call SignUp API
+                    Intent intent = new Intent(mContext, HomeActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
                 break;
         }
@@ -69,6 +81,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         } else if(TextUtils.isEmpty(confirmPassword)) {
             isValidated = false;
             alertMessage = getResources().getString(R.string.empty_confirm_password);
+        } else if(!password.equals(confirmPassword)) {
+            isValidated = false;
+            alertMessage = getResources().getString(R.string.password_miss_match);
         }
         if(isValidated) {
             return isValidated;
