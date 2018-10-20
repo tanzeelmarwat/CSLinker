@@ -91,16 +91,47 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.alumni) {
-            // Handle the camera action
+            // Load Alumni Fragment
+            AlumniFragment alumniFragment = new AlumniFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.container_home, alumniFragment, Constants.FRAGMENT_ALUMNI);
+            fragmentTransaction.commitAllowingStateLoss();
+            getSupportFragmentManager().executePendingTransactions();
         } else if (id == R.id.students) {
-
+            // Load Students Fragment
+            StudentsFragment studentsFragment = new StudentsFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.container_home, studentsFragment, Constants.FRAGMENT_STUDENTS);
+            fragmentTransaction.commitAllowingStateLoss();
+            getSupportFragmentManager().executePendingTransactions();
         } else if (id == R.id.campus) {
-
-        } else if (id == R.id.campus) {
-
+            // Load Campus Fragment
+            CampusFragment campusFragment = new CampusFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.container_home, campusFragment, Constants.FRAGMENT_CAMPUS);
+            fragmentTransaction.commitAllowingStateLoss();
+            getSupportFragmentManager().executePendingTransactions();
         } else if (id == R.id.faculty) {
-
+            // Load Faculty Fragment
+            FacultyFragment facultyFragment = new FacultyFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.container_home, facultyFragment, Constants.FRAGMENT_FACULTY);
+            fragmentTransaction.commitAllowingStateLoss();
+            getSupportFragmentManager().executePendingTransactions();
         } else if (id == R.id.staff) {
+            // Load Staff Fragment
+            StaffFragment staffFragment = new StaffFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.container_home, staffFragment, Constants.FRAGMENT_STAFF);
+            fragmentTransaction.commitAllowingStateLoss();
+            getSupportFragmentManager().executePendingTransactions();
+        } else if (id == R.id.profile) {
+            // Load Profile Fragment
+            ProfileFragment profileFragment = new ProfileFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.container_home, profileFragment, Constants.FRAGMENT_PROFILE);
+            fragmentTransaction.commitAllowingStateLoss();
+            getSupportFragmentManager().executePendingTransactions();
 
         }
 
